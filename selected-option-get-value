@@ -1,0 +1,19 @@
+$(function() {
+    $(".product-form__variants").change(function() {
+var cat =( $('option:selected', this).attr('stock') );
+   
+$('.stk').html(cat);
+var ss =( $('option:selected', this).attr('sku') );
+$('.variant-sku').html(ss);
+ var price =( $('option:selected', this).attr('price') );  
+$('.price-item').html(price);
+      var get_att_track =( $('option:selected', this).attr('tracking') );
+       if(get_att_track == '1'){
+       $('.stock_inventory ').show();
+       }else{
+          $('.stock_inventory ').hide();
+       }
+ 
+    });
+   
+});
